@@ -34,7 +34,9 @@ open class FluwxWXEntryActivity : Activity(), IWXAPIEventHandler {
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        if (isTaskRoot) {
+            finish();
+        }
         try {
             if (!WXAPiHandler.wxApiRegistered) {
                 var appInfo = packageManager.getApplicationInfo(packageName, PackageManager.GET_META_DATA)
