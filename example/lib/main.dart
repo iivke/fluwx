@@ -77,112 +77,112 @@ class ShareSelectorPage extends StatelessWidget {
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: new OutlineButton(
+            child: new OutlinedButton(
                 onPressed: () async {
-                  String extMsg = await getExtMsg();
+                  String? extMsg = await getExtMsg();
                   print("extMsg:$extMsg\n");
                 },
                 child: const Text("Get ExtMessage")),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: new OutlineButton(
+            child: new OutlinedButton(
                 onPressed: () {
-                  Navigator.of(context)?.pushNamed("shareText");
+                  Navigator.of(context).pushNamed("shareText");
                 },
                 child: const Text("share text")),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: new OutlineButton(
+            child: new OutlinedButton(
                 onPressed: () {
-                  Navigator.of(context)?.pushNamed("shareImage");
+                  Navigator.of(context).pushNamed("shareImage");
                 },
                 child: const Text("share image")),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: new OutlineButton(
+            child: new OutlinedButton(
                 onPressed: () {
-                  Navigator.of(context)?.pushNamed("shareWebPage");
+                  Navigator.of(context).pushNamed("shareWebPage");
                 },
                 child: const Text("share webpage")),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: new OutlineButton(
+            child: new OutlinedButton(
                 onPressed: () {
-                  Navigator.of(context)?.pushNamed("shareMusic");
+                  Navigator.of(context).pushNamed("shareMusic");
                 },
                 child: const Text("share music")),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: new OutlineButton(
+            child: new OutlinedButton(
                 onPressed: () {
-                  Navigator.of(context)?.pushNamed("shareVideo");
+                  Navigator.of(context).pushNamed("shareVideo");
                 },
                 child: const Text("share video")),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: new OutlineButton(
+            child: new OutlinedButton(
                 onPressed: () {
-                  Navigator.of(context)?.pushNamed("shareMiniProgram");
+                  Navigator.of(context).pushNamed("shareMiniProgram");
                 },
                 child: const Text("share mini program")),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: new OutlineButton(
+            child: new OutlinedButton(
                 onPressed: () {
-                  Navigator.of(context)?.pushNamed("sendAuth");
+                  Navigator.of(context).pushNamed("sendAuth");
                 },
                 child: const Text("send auth")),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: new OutlineButton(
+            child: new OutlinedButton(
                 onPressed: () {
-                  Navigator.of(context)?.pushNamed("pay");
+                  Navigator.of(context).pushNamed("pay");
                 },
                 child: const Text("pay")),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: new OutlineButton(
+            child: new OutlinedButton(
                 onPressed: () {
-                  Navigator.of(context)?.pushNamed("launchMiniProgram");
+                  Navigator.of(context).pushNamed("launchMiniProgram");
                 },
                 child: const Text("Launch MiniProgram")),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: new OutlineButton(
+            child: new OutlinedButton(
                 onPressed: () {
-                  Navigator.of(context)?.pushNamed("subscribeMessage");
+                  Navigator.of(context).pushNamed("subscribeMessage");
                 },
                 child: const Text("SubscribeMessage")),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: new OutlineButton(
+            child: new OutlinedButton(
                 onPressed: () {
-                  Navigator.of(context)?.pushNamed("AuthByQRCode");
+                  Navigator.of(context).pushNamed("AuthByQRCode");
                 },
                 child: const Text("AuthByQRCode")),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: new OutlineButton(
+            child: new OutlinedButton(
                 onPressed: () {
-                  Navigator.of(context)?.pushNamed("AutoDeduct");
+                  Navigator.of(context).pushNamed("AutoDeduct");
                 },
                 child: const Text("SignAuto-deduct")),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: new OutlineButton(
+            child: new OutlinedButton(
                 onPressed: () {
                   openWeChatApp();
                 },

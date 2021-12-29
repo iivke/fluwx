@@ -1,3 +1,30 @@
+# 3.6.1+4
+* Android P support
+
+# 3.6.1+3
+* Fix #431
+
+# 3.6.1+2
+* Fix #422
+
+# 3.6.1+1
+* Fix #414
+
+# 3.6.1
+* Fix #415
+
+# 3.6.0
+* APP拉起微信客服功能
+
+## 3.5.1
+* 自动释放extMsg
+
+## 3.5.0
+* update compileSdkVersion
+
+## 3.4.3
+* update Android SDK version
+
 ## 3.4.2
 * Merge #370
 

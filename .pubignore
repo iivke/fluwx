@@ -1,3 +1,4 @@
+example/android/gradle/wrapper/gradle-wrapper.jar
 .DS_Store
 .dart_tool/
 
@@ -23,3 +24,15 @@ example/android/app/.settings/org.eclipse.buildship.core.prefs
 example/ios/.symlinks
 example/Podfile.lock
 .last_build_id
+
+example/
+
+example/build
+example/.dart_tool
+
+example/.flutter-plugins
+example/.flutter-plugins-dependencies
+example/.packages
+example/.pub-cache/
+example/.pub/
+example/build/
