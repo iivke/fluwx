@@ -83,7 +83,7 @@ Future<bool> registerWxApi(
 }
 
 // get ext Message
-Future<String> getExtMsg() async {
+Future<String?> getExtMsg() async {
   return await _channel.invokeMethod("getExtMsg");
 }
 
@@ -257,4 +257,9 @@ Future<bool> authWeChatByPhoneLogin(
     {required String scope, String state = "state"}) async {
   return await _channel
       .invokeMethod("authByPhoneLogin", {"scope": scope, "state": state});
+}
+
+Future<bool> openWeChatCustomerServiceChat({required String url, required String corpId}) async {
+  return await _channel
+      .invokeMethod("openWeChatCustomerServiceChat", {"corpId": corpId, "url": url});
 }

@@ -74,6 +74,8 @@ FlutterMethodChannel *channel = nil;
         [self handelGetExtMsgWithCall:call result:result];
     } else if ([call.method hasPrefix:@"share"]) {
         [_fluwxShareHandler handleShare:call result:result];
+    } else if ([@"openWeChatCustomerServiceChat" isEqualToString:call.method]) {
+        [self openWeChatCustomerServiceChat:call result:result];
     } else {
         result(FlutterMethodNotImplemented);
     }
@@ -107,6 +109,19 @@ FlutterMethodChannel *channel = nil;
 
 - (void)checkWeChatInstallation:(FlutterMethodCall *)call result:(FlutterResult)result {
     result(@([WXApi isWXAppInstalled]));
+}
+
+- (void)openWeChatCustomerServiceChat:(FlutterMethodCall *)call result:(FlutterResult)result {
+    NSString *url = call.arguments[@"url"];
+    NSString *corpId = call.arguments[@"corpId"];
+    
+    
+    WXOpenCustomerServiceReq *req = [[WXOpenCustomerServiceReq alloc] init];
+    req.corpid = corpId;    //企业ID
+    req.url = url;         //客服URL
+    return [WXApi sendReq:req completion:^(BOOL success) {
+        result(@(success));
+    }];
 }
 
 - (void)handlePayment:(FlutterMethodCall *)call result:(FlutterResult)result {
@@ -198,6 +213,7 @@ FlutterMethodChannel *channel = nil;
 
 - (void)handelGetExtMsgWithCall:(FlutterMethodCall *)call result:(FlutterResult)result {
     result(self.extMsg);
+    self.extMsg=nil;
 }
 
 
